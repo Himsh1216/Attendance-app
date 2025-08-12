@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.iml
+.gradle/
+**/build/
+android/.gradle/
+lambdas/__pycache__/
