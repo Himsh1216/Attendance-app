@@ -8,6 +8,7 @@ import androidx.compose.runtime.*
 import com.example.attendance.ui.InstructorScreen
 import com.example.attendance.ui.StudentScreen
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,3 +28,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
