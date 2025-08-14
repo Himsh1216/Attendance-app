@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+DIR="$(cd "$(dirname "$0")" && pwd)"
+GRADLE_DIR="$DIR/.gradle-temp"
+DIST="https://services.gradle.org/distributions/gradle-8.5-bin.zip"
+if [ ! -d "$GRADLE_DIR/gradle-8.5" ]; then
+  echo "Downloading Gradle 8.5..."
+  mkdir -p "$GRADLE_DIR"
+  curl -fsSL "$DIST" -o "$GRADLE_DIR/gradle.zip"
+  unzip -q "$GRADLE_DIR/gradle.zip" -d "$GRADLE_DIR"
+  rm "$GRADLE_DIR/gradle.zip"
+fi
+exec "$GRADLE_DIR/gradle-8.5/bin/gradle" "$@"

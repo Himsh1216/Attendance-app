@@ -41,6 +41,20 @@ attendance/
    └─ README.md                   # (this file)
 ```
 
+## Building the Android app
+
+This repo avoids committing the Gradle wrapper JAR, so a small helper script in
+`android/gradlew` bootstraps Gradle (downloads version **8.5** on first run).
+You can build from the command line:
+
+```bash
+cd android
+./gradlew assembleDebug
+```
+
+Or open the `android/` folder directly in **Android Studio** and let it run the
+same script.
+
 ### `backend/Dockerfile` (optional but recommended for cloud deploys)
 
 ```dockerfile
